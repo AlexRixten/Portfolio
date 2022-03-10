@@ -1,0 +1,91 @@
+.main-subtitle{
+    font-weight: 700;
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 88px;
+    color: #FFFFFF;
+}
+
+.main-title{
+    font-family: sans-serif;
+    position: relative;
+    font-weight: 900;
+    font-size: 96px;
+    line-height: 117px;
+    -webkit-text-stroke: 2px #FFFFFF;
+    color: transparent;
+    &:before{
+        content: '';
+        position: absolute;
+        top: -30px;
+        right: 35px;
+        width: 150px;
+        height: 65px;
+        background: url('/img/main/sign.png') center center no-repeat
+    }
+}
+
+.title{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #0499DD;
+    &-fz14y{
+        font-size: 14px;
+        line-height: 17px;
+        color: #FFC700;
+    }
+    &-fz18{
+        font-size: 18px;
+        line-height: 22px;
+    }
+    &-fz24b{
+        font-weight: bold;
+        color: #FFFFFF;
+    }
+}
+
+
+.subtitle{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #282828;
+    &-fz12w{
+        font-size: 12px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+    &-fz14{
+        font-size: 14px;
+        line-height: 17px;
+        color: #282828;
+    }
+    &-fz14b{
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        color: #282828;
+    }
+    &-fz14y{
+        font-size: 14px;
+        line-height: 17px;
+        color: #FFC700;
+    }
+}
+
+
+.linkall{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    text-decoration-line: underline;
+    color: #282828;
+}
+
+.top{
+    margin-bottom: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

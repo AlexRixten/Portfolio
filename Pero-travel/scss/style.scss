@@ -1,0 +1,43 @@
+@import 'libs/swiper-bundle.min';
+*{
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+.container{
+	margin: 0 auto;
+	max-width: 1120px;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+.content {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
+}
+@media(max-width: 1120px){
+	.container{
+		margin: 0 15px;
+	}
+}
+
+@import 'titles';
+@import 'buttons';
+@import 'slider';
+
+@import 'blocks/header';
+@import 'blocks/social';
+@import 'blocks/main';
+@import 'blocks/popular';
+@import 'blocks/types';
+@import 'blocks/gallery';
+@import 'blocks/reviews';
+@import 'blocks/question';
+@import 'blocks//footer';

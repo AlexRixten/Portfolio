@@ -1,0 +1,28 @@
+.btn{
+    display: block;
+    background: linear-gradient(92.71deg, #0499DD 0%, #17C1BC 100%);
+    border-radius: 60px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    width: 230px;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    &-main{
+        margin-top: 60px;
+    }
+    &-slide{
+        margin-top: 20px;
+        width: 160px;
+        height: 40px;
+    }
+    &-types{
+        margin: 20px auto 0;
+        width: 230px;
+        height: 50px;
+
+    }
+}
