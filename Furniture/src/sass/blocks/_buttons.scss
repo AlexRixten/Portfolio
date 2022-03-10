@@ -1,0 +1,49 @@
+.btn{
+    background: transparent;
+    border: 2px solid #CDA861;
+    border-radius: 50px;
+    padding: 16px 32px;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    color: #FFFFFF;
+    cursor: pointer;
+    &:hover{
+        background: #CDA861;
+        box-shadow: 0px 5px 10px rgba(52, 56, 61, 0.2);
+        color: #34383D;
+    }
+    &-shop{
+        background: #CDA861;
+        color: #34383D;
+        width: 220px;
+    }
+    &-sell{
+        padding: 14px 45px;
+        color: #34383D;
+        display: block;
+        margin: 0 auto;
+    }
+    &-form{
+        background: #CDA861;
+        position: absolute;
+        top: 8px;
+        left: 420px;
+    }
+}
+.logo{
+    width: 200px;
+    font-family: 'Roboto';
+    font-size: 40px;
+    line-height: 47px;
+    color: #FFFFFF;
+    padding: 11px 48px;
+    background: #34383D;
+}
+.divider{
+    background: #CDA861;
+    width: 100%;
+    height: 2px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}

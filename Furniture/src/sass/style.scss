@@ -1,0 +1,43 @@
+@import 'libs/bootstrap-reboot.min';
+@import 'libs/swiper-bundle.min';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@500&display=swap');
+
+// @import 'base/variables';
+// @import 'base/mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
+}
+.container{
+    max-width: 1680px;
+    margin: 0 auto;
+}
+@media(max-width: 1200px){
+    .container{
+        margin: 0 15px;
+    }
+}
+
+@import 'blocks/titles';
+@import 'blocks/buttons';
+@import 'blocks/swiper';
+
+@import 'blocks/main-page/header';
+@import 'blocks/main-page/promo';
+@import 'blocks/main-page/about';
+@import 'blocks/main-page/sell';
+@import 'blocks/main-page/deals';
+@import 'blocks/main-page/star';
+@import 'blocks/main-page/proc';
+@import 'blocks/main-page/blog';
+@import 'blocks/main-page/say';
+@import 'blocks/main-page/products';
+@import 'blocks/main-page/works';
+@import 'blocks/main-page/footer';

@@ -1,0 +1,19 @@
+.proc{
+    padding: 80px 0;
+    height: 850px;
+    background: url('../img/proc/bg.jpg') center center/cover no-repeat;
+    &__wrapper{
+        margin: 0 auto;
+        margin-top: 500px;
+        max-width: 1030px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+}

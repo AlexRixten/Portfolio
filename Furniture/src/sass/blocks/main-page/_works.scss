@@ -1,0 +1,31 @@
+.works{
+    padding: 80px 0;
+    height: 857px;
+    background: url('../img/works/bg.jpg') center center/cover no-repeat;
+    &__wrapper{
+        padding: 100px 15px 343px 110px;
+        height: 697px;
+        background: url('../img/works/img.jpg') center center/cover no-repeat;
+        filter: drop-shadow(0px 34px 62px rgba(0, 0, 0, 0.1));
+        border-radius: 20px;
+    }
+}
+.form{
+    margin-top: 80px;
+    position: relative;
+    &__input{
+        padding: 26px 40px;
+        width: 610px;
+        height: 79px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 150px;
+        border: none;
+        &::placeholder{
+            font-family: 'Montserrat';
+            font-size: 22px;
+            line-height: 27px;
+            color: #000000;
+        }
+    }
+}

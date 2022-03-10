@@ -1,0 +1,14 @@
+.promo{
+    padding-bottom: 230px;
+    background: url('../img/header/bg.jpg') center center/cover no-repeat;
+    &__wrapper{
+        margin-top: 190px;
+        max-width: 660px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    &__content{
+        max-width: 490px;
+    }
+}

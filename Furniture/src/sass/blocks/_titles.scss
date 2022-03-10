@@ -1,0 +1,195 @@
+.title{
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 76px;
+    line-height: 93px;
+    color: #34383D;
+    display: inline-block;
+    span{
+        color: #CDA861;
+        text-decoration: underline;
+    }
+    &_fz150{
+        font-weight: bold;
+        font-size: 150px;
+        line-height: 183px;
+        background: linear-gradient(90deg, #5E5749 0.01%, #9F9B89 100.01%);
+        transform: rotate(-14.93deg);
+    }
+    &_fz30{
+        font-size: 30px;
+        line-height: 37px;
+    }
+    &_fz30b{
+        font-size: 30px;
+        line-height: 37px;
+        color: #000000;
+    }
+    &_fz22blk{
+        font-size: 22px;
+        line-height: 27px;
+        color: #000000;
+    }
+    &_fz22bld{
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 27px;
+        text-align: center;
+        color: #34383D;
+    }
+    &_fz22{
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 27px;
+        color: #34383D;
+    }
+    &_fz22w{
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 27px;
+        color: #FFFFFF;
+    }
+    &_fz26{
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 32px;
+        color: #34383D;
+    }
+    &_fz16{
+        font-style: italic;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000000;
+    }
+    &_fz24it{
+        font-size: 24px;
+        line-height: 29px;
+        color: #000000;
+    }
+}
+.subtitle{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #34383D;
+    &_fz22op{
+        font-size: 22px;
+        line-height: 26px;
+        color: #34383D;
+        opacity: 0.6;
+    }
+    &_fz22{
+        font-size: 22px;
+        line-height: 26px;
+        color: #34383D;
+    }
+    &_fz22bld{
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 26px;
+        color: #34383D;
+        letter-spacing: 0.09em;
+    }
+    &_fz22ls{
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 26px;
+        letter-spacing: 0.09em;
+        color: #000000;
+    }
+    &_fz22it{
+        font-style: italic;
+        font-size: 22px;
+        line-height: 26px;
+        color: #34383D;
+    }
+    &_fz18{
+        font-size: 18px;
+        line-height: 21px;
+        color: #34383D;
+        opacity: 0.8;
+    }
+    &_fz18bld{
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        color: #34383D;
+    }
+    &_fz18sl{
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 0.09em;
+        color: #34383D;
+        opacity: 0.8;
+    }
+    &_fz18r{
+        font-size: 18px;
+        line-height: 21px;
+        color: #CDA861;
+    }
+    &_fz40{
+        font-size: 40px;
+        line-height: 47px;
+        color: #FFFFFF;
+    }
+    &_fz20{
+        font-size: 20px;
+        line-height: 23px;
+        color: #000000;
+    }
+    &_fz20w{
+        font-size: 20px;
+        line-height: 23px;
+        color: #FFFFFF;
+    }
+    &_fz20ls{
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 0.09em;
+        color: #000000;
+    }
+    &_fz20bld{
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 23px;
+        color: #34383D;
+    }
+    &_fz14{
+        font-size: 14px;
+        line-height: 16px;
+        color: #000000;
+    }
+    &_fz14w{
+        font-size: 14px;
+        line-height: 16px;
+        color: #FFFFFF;
+    }
+    &_fz36w{
+        font-size: 36px;
+        line-height: 42px;
+        color: #FFFFFF;
+    }
+    &_fz32{
+        font-size: 32px;
+        line-height: 37px;
+        text-decoration-line: line-through;
+        color: #CDA861;
+    }
+    &_fz32bld{
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 37px;
+        color: #34383D;
+    }
+    &_fz24{
+        font-size: 24px;
+        line-height: 28px;
+        color: #34383D;
+    }
+    &_fz30{
+        font-size: 30px;
+        line-height: 35px;
+        color: #000000;
+    }
+}

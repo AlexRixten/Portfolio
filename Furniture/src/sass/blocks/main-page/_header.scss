@@ -1,0 +1,71 @@
+.header{
+    padding: 20px 0 50px 0;
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__store{
+        width: 530px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__button{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__navmenu{
+        width: 1041px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__list{
+        width: 800px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__icons{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item{
+        list-style-type: none;
+    }
+    &__link-lst{
+        position: relative;
+        transition: 0.4s;
+        &:before{
+            content: '';
+            position: absolute;
+            background: #CDA861;
+            border-radius: 5px;
+            width: 0%;
+            height: 3px;
+            bottom: 0;
+            transition: 0.4s;
+        }
+        &:hover{
+            color: #34383D;
+            opacity: 1;
+            &:before{
+                width: 100%;
+            }
+        }
+    }
+
+}

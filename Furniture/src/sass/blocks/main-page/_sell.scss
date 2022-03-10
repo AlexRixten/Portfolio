@@ -1,0 +1,39 @@
+.sell{
+    padding: 80px 0;
+    text-align: center;
+    &__wrapper{
+        margin-top: 70px;
+    }
+    &__block-img{
+        position: relative;
+        text-align: center;
+        padding-top: 100px;
+        height: 150px;
+        background: #F2F1F1;
+        border-radius: 30px;
+        img{
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__item{
+        width: 260px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    &__starts{
+        margin-top: 20px;
+        color: #FFC600;
+    }
+    &__price{
+        margin-top: 17px;
+    }
+    &__txt{
+        margin-top: 17px;
+        margin-bottom: 20px;
+    }
+}

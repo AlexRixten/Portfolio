@@ -1,0 +1,29 @@
+.say{
+    text-align: center;
+    padding: 80px 0;
+    min-height: 634px;
+    background: url('../img/say/bg.jpg') center center/cover no-repeat;
+    &__wrapper{
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(540px,auto));
+        grid-template-rows: 345px;
+        gap: 30px;
+    }
+    &__block{
+        position: relative;
+        padding: 110px 21px 50px 21px;
+        background: #F8F7F7;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        img{
+            position: absolute;
+            top: -54px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__name{
+        margin-top: 50px;
+    }
+}

@@ -1,0 +1,18 @@
+.about{
+    padding: 150px 0;
+    background: url('../img/about/bg.jpg') center center/cover no-repeat;
+    &__wrapper{
+        max-width: 520px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        margin: 0 0 0 800px;
+    }
+    &-subtitle{
+        margin-top: 30px;
+    }
+    &-btn{
+        margin-top: 24px;
+    }
+}
