@@ -1,0 +1,56 @@
+.creators
+    padding: 64px 0 80px 0
+    min-sheight: 684px
+    background: url('../img/creators/bg.png') center (center/cover) no-repeat
+    &__wrapper
+        margin-top: 13px
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(530px, 1fr))
+    &__item
+        margin: 0 auto
+        margin-top: 57px
+        position: relative
+        width: 522px
+        height: 104px
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        gap: 16px
+        background: #031822
+        border-radius: 40px
+        &:after
+            content: url('../img/creators/arrow.svg')
+            position: absolute
+            top: -11px
+            left: -15px
+            width: 100%
+            height: 100%
+        &:before
+            content: ''
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 0
+            background: linear-gradient(180deg, #00BED8 0%, #008294 100%)
+            box-shadow: 8px 8px 72px rgba(0, 2, 7, 0.2)
+            border-radius: 40px
+            transform: rotate(356deg)
+            z-index: -1
+    &__img
+        width: 80px
+        height: 80px
+        border-radius: 50%
+        margin-left: 30px
+    &__content
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+    &__link
+        font-family: "Poppins"
+        font-weight: 500
+        font-size: 18px
+        line-height: 27px
+        color: #FFFFFF
+        opacity: 0.5
+        text-decoration: none
+        z-index: 3

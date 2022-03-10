@@ -1,0 +1,60 @@
+.auctions
+    padding: 64px 0 57px 0
+    min-height: 654px
+    background: url('../img/auctions/bg.png') center (center/cover) no-repeat
+    &__wrapper
+        margin-top: 42px
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(372px, 1fr))     
+    &__item
+        margin: 0 auto
+        margin-top: 30px
+        padding: 8px
+        width: 372px
+        height: 496px
+        background: rgba(4, 19, 26, 0.1)
+        border: 1px solid rgba(255, 255, 255, 0.5)
+        box-sizing: border-box
+        backdrop-filter: blur(12px)
+        border-radius: 16px
+    &__img
+        width: 100%
+        height: 480px
+        cursor: pointer
+        &-active
+            width: 100%
+            height: 335px 
+    &__info
+        display: none
+        &-active
+           display: block 
+    &__block
+        margin-top: 4px
+        margin-bottom: 8px
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__price
+        display: flex
+        align-items: flex-start
+        flex-direction: column
+    &__time
+        display: flex
+        align-items: flex-end
+        flex-direction: column
+    &__create
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__people
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+    &__icon
+        width: 40px
+        height: 40px
+        border-radius: 50%
+        margin-right: 8px
+
+
+
