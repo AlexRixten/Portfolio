@@ -1,0 +1,108 @@
+.logo{
+    font-family: 'Ribeye';
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    text-decoration: none;
+    &:hover{
+        color: #C9453B;
+        text-decoration: none;
+    }
+    &_blk{
+        color:#000000;
+    }
+}
+.title{
+    font-family: 'Gelasio';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 65px;
+    line-height: 120%;
+    color: #FFFFFF;
+    &_promo{
+        max-width: 804px;
+    }
+    &_fz43{
+        font-weight: 500;
+        font-size: 43px;
+        line-height: 140%;
+        color: #000000;
+    }
+    &_fz24{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 150%;
+        color: #000000;
+    }
+    &_fz20{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 160%;
+        color: #000000;
+    }
+}
+.section_title{
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+.section_subtitle{
+    margin: 0 auto;
+    margin-top: 20px;
+    max-width: 700px;
+    text-align: center;
+}
+
+.subtitle{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: #FFFFFF;
+    opacity: 0.6;
+    span{
+        font-weight: bold;
+        opacity: 1;
+    }
+    &_fz16{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.06em;
+        color: #000000;
+        &-lnk{
+            display: inline;
+            margin-top: 20px;
+            font-weight: 500;
+            color: #000000;
+            &:nth-child(1){
+                margin: 0;
+            }
+        }
+        &-mt40{
+            margin-top: 40px;
+            color: #000000;
+        }
+        &-mt10{
+            margin-top: 10px;
+            color: #000000;
+        }
+    }
+    &_fz18{
+        color: #000000;
+    }
+    &_fz20{
+        font-size: 20px;
+        color: #000000;
+        &-unop{
+            margin-bottom: 40px;
+            opacity: 1;
+        }
+    }
+    &_promo{
+        max-width: 458px;
+        margin-top: 30px;
+    }
+
+}

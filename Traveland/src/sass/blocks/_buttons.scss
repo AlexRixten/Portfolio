@@ -1,0 +1,18 @@
+.btn{
+    padding: 14px 35px;
+    background: #C9453B;
+    border-radius: 5px;
+    color: #FFFFFF;
+    cursor: pointer;
+    border: none;
+    &:hover{
+        transform: scale(1.05)
+    }
+    &_promo{
+        margin-top: 40px;
+        padding: 17px 46px;
+    }
+    &_form{
+        padding: 10px 32px;
+    }
+}

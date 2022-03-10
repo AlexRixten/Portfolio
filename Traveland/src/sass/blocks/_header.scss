@@ -1,0 +1,30 @@
+.header{
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__navmenu{
+        margin: 0;
+        max-width: 470px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+
+    }
+    &__item{
+        list-style: none;
+    }
+    &__link{
+        font-family: 'Roboto';
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 150%;
+        color: #FFFFFF;
+        &:hover{
+            color: #C9453B;
+            text-decoration: none;
+        }
+    }
+}
