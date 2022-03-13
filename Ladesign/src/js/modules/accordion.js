@@ -3,13 +3,19 @@ const accordion = (triggersSelector) => {
 
     btns.forEach(btn => {
         btn.addEventListener('click', function() {
-            this.classList.toggle('active-style');
-            this.nextElementSibling.classList.toggle('active-content');
+            this.innerHTML = `
+                <img src="assets/img/accordion/arrow_up.svg" alt="arrow_up">
+            `
+            this.parentNode.classList.toggle('active-style');
+            this.parentNode.nextElementSibling.classList.toggle('active-content');
 
-            if (this.classList.contains('active-style')) {
-                this.nextElementSibling.style.maxHeight = this.nextElementSibling.scrollHeight + 80 + "px";
+            if (this.parentNode.classList.contains('active-style')) {
+                this.parentNode.nextElementSibling.style.maxHeight = this.parentNode.nextElementSibling.scrollHeight + 80 + "px";
             } else {
-                this.nextElementSibling.style.maxHeight = '0px';
+                this.parentNode.nextElementSibling.style.maxHeight = '0px';
+                this.innerHTML = `
+                <img src="assets/img/accordion/arrow_down.svg" alt="arrow_down">
+            `
             }
         });
     });
@@ -28,6 +34,7 @@ const accordion = (triggersSelector) => {
     //         }
     //     });
     // });
+    // <span><img src="assets/img/accordion/arrow_down.svg" alt="arrow_down"></img>
 
 };
 

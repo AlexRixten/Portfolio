@@ -4439,10 +4439,10 @@ window.addEventListener('DOMContentLoaded', function () {
   // checkTextInputs('[name="message"]');
   // showMoreStyles('.button-styles', '#styles .row');
   // calc('#size', '#material', '#options', '.promocode', '.calc-price');
-  // filter();
-  // pictureSize('.sizes-block');
-  // accordion('.accordion-heading');
-  // burger('.burger-menu', '.burger');
+
+  Object(_modules_filter__WEBPACK_IMPORTED_MODULE_6__["default"])(); // pictureSize('.sizes-block');
+
+  Object(_modules_accordion__WEBPACK_IMPORTED_MODULE_0__["default"])('.accordion-heading span'); // burger('.burger-menu', '.burger');
   // drop();
 
   Object(_modules_scrolling__WEBPACK_IMPORTED_MODULE_11__["default"])('.pageup');
@@ -4467,13 +4467,15 @@ var accordion = function accordion(triggersSelector) {
   var btns = document.querySelectorAll(triggersSelector);
   btns.forEach(function (btn) {
     btn.addEventListener('click', function () {
-      this.classList.toggle('active-style');
-      this.nextElementSibling.classList.toggle('active-content');
+      this.innerHTML = "\n                <img src=\"assets/img/accordion/arrow_up.svg\" alt=\"arrow_up\">\n            ";
+      this.parentNode.classList.toggle('active-style');
+      this.parentNode.nextElementSibling.classList.toggle('active-content');
 
-      if (this.classList.contains('active-style')) {
-        this.nextElementSibling.style.maxHeight = this.nextElementSibling.scrollHeight + 80 + "px";
+      if (this.parentNode.classList.contains('active-style')) {
+        this.parentNode.nextElementSibling.style.maxHeight = this.parentNode.nextElementSibling.scrollHeight + 80 + "px";
       } else {
-        this.nextElementSibling.style.maxHeight = '0px';
+        this.parentNode.nextElementSibling.style.maxHeight = '0px';
+        this.innerHTML = "\n                <img src=\"assets/img/accordion/arrow_down.svg\" alt=\"arrow_down\">\n            ";
       }
     });
   }); //       blocks = document.querySelectorAll(itemsSelector);
@@ -4490,6 +4492,7 @@ var accordion = function accordion(triggersSelector) {
   //         }
   //     });
   // });
+  // <span><img src="assets/img/accordion/arrow_down.svg" alt="arrow_down"></img>
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (accordion);
@@ -4779,18 +4782,14 @@ var filter = function filter() {
   var menu = document.querySelector('.portfolio-menu'),
       items = menu.querySelectorAll('li'),
       btnAll = menu.querySelector('.all'),
-      btnLovers = menu.querySelector('.lovers'),
-      btnChef = menu.querySelector('.chef'),
-      btnGirl = menu.querySelector('.girl'),
-      btnGuy = menu.querySelector('.guy'),
-      btnGrandmother = menu.querySelector('.grandmother'),
-      btnGranddad = menu.querySelector('.granddad'),
+      btnFlat = menu.querySelector('.flat'),
+      btnHouse = menu.querySelector('.house'),
+      btnRoom = menu.querySelector('.room'),
       wrapper = document.querySelector('.portfolio-wrapper'),
       markAll = wrapper.querySelectorAll('.all'),
-      markGirl = wrapper.querySelectorAll('.girl'),
-      markLovers = wrapper.querySelectorAll('.lovers'),
-      markChef = wrapper.querySelectorAll('.chef'),
-      markGuy = wrapper.querySelectorAll('.guy'),
+      markFlat = wrapper.querySelectorAll('.flat'),
+      markHouse = wrapper.querySelectorAll('.house'),
+      markRoom = wrapper.querySelectorAll('.room'),
       no = document.querySelector('.portfolio-no');
 
   var typeFilter = function typeFilter(markType) {
@@ -4815,23 +4814,14 @@ var filter = function filter() {
   btnAll.addEventListener('click', function () {
     typeFilter(markAll);
   });
-  btnLovers.addEventListener('click', function () {
-    typeFilter(markLovers);
+  btnFlat.addEventListener('click', function () {
+    typeFilter(markFlat);
   });
-  btnChef.addEventListener('click', function () {
-    typeFilter(markChef);
+  btnHouse.addEventListener('click', function () {
+    typeFilter(markHouse);
   });
-  btnGirl.addEventListener('click', function () {
-    typeFilter(markGirl);
-  });
-  btnGuy.addEventListener('click', function () {
-    typeFilter(markGuy);
-  });
-  btnGrandmother.addEventListener('click', function () {
-    typeFilter();
-  });
-  btnGranddad.addEventListener('click', function () {
-    typeFilter();
+  btnRoom.addEventListener('click', function () {
+    typeFilter(markRoom);
   });
   menu.addEventListener('click', function (e) {
     var target = e.target;

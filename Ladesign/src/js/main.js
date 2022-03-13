@@ -25,9 +25,9 @@ window.addEventListener('DOMContentLoaded', () => {
     // checkTextInputs('[name="message"]');
     // showMoreStyles('.button-styles', '#styles .row');
     // calc('#size', '#material', '#options', '.promocode', '.calc-price');
-    // filter();
+    filter();
     // pictureSize('.sizes-block');
-    // accordion('.accordion-heading');
+    accordion('.accordion-heading span');
     // burger('.burger-menu', '.burger');
     // drop();
     scrolling('.pageup');

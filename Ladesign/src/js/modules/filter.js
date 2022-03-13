@@ -2,18 +2,14 @@ const filter = () => {
     const menu = document.querySelector('.portfolio-menu'),
           items = menu.querySelectorAll('li'),
           btnAll = menu.querySelector('.all'),
-          btnLovers = menu.querySelector('.lovers'),
-          btnChef = menu.querySelector('.chef'),
-          btnGirl = menu.querySelector('.girl'),
-          btnGuy = menu.querySelector('.guy'),
-          btnGrandmother = menu.querySelector('.grandmother'),
-          btnGranddad = menu.querySelector('.granddad'),
+          btnFlat = menu.querySelector('.flat'),
+          btnHouse = menu.querySelector('.house'),
+          btnRoom = menu.querySelector('.room'),
           wrapper = document.querySelector('.portfolio-wrapper'),
           markAll = wrapper.querySelectorAll('.all'),
-          markGirl = wrapper.querySelectorAll('.girl'),
-          markLovers = wrapper.querySelectorAll('.lovers'),
-          markChef = wrapper.querySelectorAll('.chef'),
-          markGuy = wrapper.querySelectorAll('.guy'),
+          markFlat = wrapper.querySelectorAll('.flat'),
+          markHouse = wrapper.querySelectorAll('.house'),
+          markRoom = wrapper.querySelectorAll('.room'),
           no = document.querySelector('.portfolio-no');
 
     const typeFilter = (markType) => {
@@ -40,28 +36,16 @@ const filter = () => {
         typeFilter(markAll);
     });
 
-    btnLovers.addEventListener('click', () => {
-        typeFilter(markLovers);
+    btnFlat.addEventListener('click', () => {
+        typeFilter(markFlat);
     });
 
-    btnChef.addEventListener('click', () => {
-        typeFilter(markChef);
+    btnHouse.addEventListener('click', () => {
+        typeFilter(markHouse);
     });
 
-    btnGirl.addEventListener('click', () => {
-        typeFilter(markGirl);
-    });
-
-    btnGuy.addEventListener('click', () => {
-        typeFilter(markGuy);
-    });
-
-    btnGrandmother.addEventListener('click', () => {
-        typeFilter();
-    });
-
-    btnGranddad.addEventListener('click', () => {
-        typeFilter();
+    btnRoom.addEventListener('click', () => {
+        typeFilter(markRoom);
     });
 
     menu.addEventListener('click', (e) => {

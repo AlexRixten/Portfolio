@@ -180,7 +180,7 @@
 .benefits .benefits-wrapper{
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   margin-top: 50px;
 }
@@ -227,13 +227,27 @@
   align-items: center;
   justify-content: space-between;
 }
-.accordion-block{
-  max-width: 480px;
-  margin-top: 12px;
-  color: var(--main-color);
-}
 .accordion-block.subtitle-fz16{
   color: var(--main-color);
+}
+.accordion-heading.active+.accordion-block{
+  display: block;
+}
+.accordion-block {
+  margin-top: 12px;
+  max-width: 480px;
+  color: var(--main-color);
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  overflow: hidden;
+  /* display: none;
+  margin-top: 1rem;
+  padding: 3rem 4rem; */
+}
+.accordion-block.active-content{
+  overflow: visible;
+  opacity: 1;
 }
 
 .portfolio{
