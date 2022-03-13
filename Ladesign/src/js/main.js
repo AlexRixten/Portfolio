@@ -1,0 +1,34 @@
+import accordion from './modules/accordion';
+import burger from './modules/burger';
+import calc from './modules/calc';
+import calc_2 from './modules/calc_2';
+import checkTextInputs from './modules/checkTextInputs';
+import drop from './modules/drop';
+import filter from './modules/filter';
+import forms from './modules/forms';
+import mask from './modules/mask';
+import modals from './modules/modals';
+import pictureSize from './modules/pictureSize';
+import scrolling from './modules/scrolling';
+import showMoreStyles from './modules/showMoreStyles';
+import sliders from './modules/sliders';
+
+window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+
+    // modals();
+    // sliders('.feedback-slider-item', 'horizontal', '.main-prev-btn', '.main-next-btn');
+    // sliders('.main-slider-item', 'vertical');
+    // forms();
+    // mask('[name="phone"]');
+    // checkTextInputs('[name="name"]');
+    // checkTextInputs('[name="message"]');
+    // showMoreStyles('.button-styles', '#styles .row');
+    // calc('#size', '#material', '#options', '.promocode', '.calc-price');
+    // filter();
+    // pictureSize('.sizes-block');
+    // accordion('.accordion-heading');
+    // burger('.burger-menu', '.burger');
+    // drop();
+    scrolling('.pageup');
+});
