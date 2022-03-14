@@ -10,7 +10,8 @@ const filter = () => {
           markFlat = wrapper.querySelectorAll('.flat'),
           markHouse = wrapper.querySelectorAll('.house'),
           markRoom = wrapper.querySelectorAll('.room'),
-          no = document.querySelector('.portfolio-no');
+          no = document.querySelector('.portfolio-no'),
+          btn = document.querySelector('.accordion-btn');
 
     const typeFilter = (markType) => {
         markAll.forEach(mark => {
@@ -22,13 +23,16 @@ const filter = () => {
         no.classList.remove('animated', 'fadeIn');
 
         if(markType){
+            console.log(123)
             markType.forEach(mark =>{
                 mark.style.display = 'block';
                 mark.classList.add('animated', 'fadeIn');
+                btn.style.display = 'block';
             });
         } else {
             no.style.display = 'block';
             no.classList.add('animated', 'fadeIn');
+            btn.style.display = 'none';
         }
     };
 
@@ -45,7 +49,7 @@ const filter = () => {
     });
 
     btnRoom.addEventListener('click', () => {
-        typeFilter(markRoom);
+        typeFilter();
     });
 
     menu.addEventListener('click', (e) => {
@@ -55,10 +59,7 @@ const filter = () => {
             items.forEach(btn => btn.classList.remove('active'));
             target.classList.add('active');
         }
-
     });
-
-
 };
 
 export default filter;

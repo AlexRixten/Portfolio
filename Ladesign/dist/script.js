@@ -4790,7 +4790,8 @@ var filter = function filter() {
       markFlat = wrapper.querySelectorAll('.flat'),
       markHouse = wrapper.querySelectorAll('.house'),
       markRoom = wrapper.querySelectorAll('.room'),
-      no = document.querySelector('.portfolio-no');
+      no = document.querySelector('.portfolio-no'),
+      btn = document.querySelector('.accordion-btn');
 
   var typeFilter = function typeFilter(markType) {
     markAll.forEach(function (mark) {
@@ -4801,13 +4802,16 @@ var filter = function filter() {
     no.classList.remove('animated', 'fadeIn');
 
     if (markType) {
+      console.log(123);
       markType.forEach(function (mark) {
         mark.style.display = 'block';
         mark.classList.add('animated', 'fadeIn');
+        btn.style.display = 'block';
       });
     } else {
       no.style.display = 'block';
       no.classList.add('animated', 'fadeIn');
+      btn.style.display = 'none';
     }
   };
 
@@ -4821,7 +4825,7 @@ var filter = function filter() {
     typeFilter(markHouse);
   });
   btnRoom.addEventListener('click', function () {
-    typeFilter(markRoom);
+    typeFilter();
   });
   menu.addEventListener('click', function (e) {
     var target = e.target;
