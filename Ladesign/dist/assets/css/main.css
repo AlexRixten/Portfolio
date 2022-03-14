@@ -103,6 +103,7 @@
 }
 
 .btn{
+  position: relative;
   margin: 0 auto;
   font-family: 'RobotoCondensed-Regular';
   font-size: 14px;
@@ -116,14 +117,16 @@
   height: 50px;
   color: var(--wht-color);
   background-color: var(--btn-color);
+  border: none;
 }
 .btn:hover{
+  color: var(--wht-color);
   background: #4A415A; 
 }
 .btn:active{
+  color: var(--wht-color);
   background: #63557C;
 }
-
 
 .btn-w{
   margin: 0 auto;
@@ -139,6 +142,8 @@
   width: 200px;
   height: 50px;
   border: 1px solid var(--btn-color);
+  background-color: var(--wht-color);
+  border: none;
 }
 .btn-w:hover{
   background-color: var(--btn-color);
@@ -363,3 +368,78 @@
   color: var(--main-color);
 }
 
+.application{
+  padding: 130px 0;
+  text-align: center;
+}
+.application .application-link{
+  position: relative;
+  color: var(--main-color);
+}
+.application .application-link:before{
+  position: absolute;
+  content: '';
+  top: 9px;
+  right: -20px;
+  width: 17px;
+  height: 17px;
+  background: url('../img/application/arrow.svg') center center/cover no-repeat;
+}
+
+
+.footer{
+  padding: 95px 0;
+  text-align: center;
+  background-color: var(--footer-color);
+}
+.footer .footer-wrapper{
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.footer .footer-link{
+  color: var(--main-color);
+}
+.footer-subtitle{
+  color: var(--main-color);
+}
+
+
+.popup{
+  position: relative;
+  padding: 50px;
+  max-width: 800px;
+  min-height: 360px;
+  border: 2px solid var(--btn-color);
+}
+.popup .popup-close{
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  border: none;
+  font-size: 20px;
+  background-color: transparent;
+  color: var(--main-color);
+}
+.popup .form{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.popup .popup-btn{
+  margin: 0;
+}
+.popup .popup-title{
+  color: var(--main-color);
+}
+.popup .popup-subtitle{
+  max-width: 300px;
+  color: var(--main-color);
+}
+.popup .popup-block{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 35px;
+}
