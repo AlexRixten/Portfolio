@@ -4430,8 +4430,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 window.addEventListener('DOMContentLoaded', function () {
-  'use strict'; // modals();
-  // sliders('.feedback-slider-item', 'horizontal', '.main-prev-btn', '.main-next-btn');
+  'use strict';
+
+  Object(_modules_modals__WEBPACK_IMPORTED_MODULE_9__["default"])(); // sliders('.feedback-slider-item', 'horizontal', '.main-prev-btn', '.main-next-btn');
   // sliders('.main-slider-item', 'vertical');
   // forms();
   // mask('[name="phone"]');
@@ -5124,10 +5125,10 @@ var modals = function modals() {
     });
   }
 
-  bindModal('.button-design', '.popup-design', '.popup-design .popup-close');
-  bindModal('.button-consultation', '.popup-consultation', '.popup-consultation .popup-close');
-  bindModal('.fixed-gift', '.popup-gift', '.popup-gift .popup-close', true);
-  openByScroll('.fixed-gift'); // showModalByTime('.popup-consultation', 5000);
+  bindModal('.application-link', '.popup-overlay', '.popup-overlay .popup-close'); // bindModal('.button-consultation', '.popup-consultation', '.popup-consultation .popup-close');
+  // bindModal('.fixed-gift', '.popup-gift', '.popup-gift .popup-close', true);
+  // openByScroll('.fixed-gift');
+  // showModalByTime('.popup-consultation', 5000);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (modals);

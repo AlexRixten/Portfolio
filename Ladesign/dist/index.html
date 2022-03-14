@@ -15,7 +15,7 @@
 		<header id="up" class="header">
 			<div class="container">
 				<div class="header-wrapper">
-					<img src="assets/img/header/logo.png" alt="logo" class="logo">
+					<a href="#" class="header-link"><img src="assets/img/header/logo.png" alt="logo" class="logo"></a>
 					<nav class="nav">
 						<a href="#" class="header-link menu">Портфолио</a>
 						<a href="#" class="header-link menu">Услуги и цены</a>
@@ -131,7 +131,12 @@
 	<section class="application">
 		<div class="container">
 			<div class="application-wrapper">
-				<a href="#" class="application-link title title-h2">оставить заявку на проект</a>
+				<a href="#" class="application-link title title-h2">оставить заявку на проект 
+					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M15.5 0.5L0.5 15.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M3 0.5H15.5V13" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</a>
 			</div>
 		</div>
 	</section>
@@ -149,28 +154,30 @@
 			<path fill-rule="evenodd" clip-rule="evenodd" d="M26 0H0V26H26V0ZM4.6593 17.7519L13.1233 10.33L21.5873 17.7519L22.9059 16.2481L13.7826 8.24813L13.1233 7.67L12.464 8.24813L3.3407 16.2481L4.6593 17.7519Z" fill="black"/>
 		</svg>
 	</a>
-	<div class="popup">
-		<div class=popup-dialog>
-			<div class=popup-content>
-				<button class=popup-close>&times;</button>
-				<div class="popup-title title title-h3">оставЬТЕ СВОИ КОНТАКТЫ. мЫ СВЯЖЕМСЯ С ВАМИ И ОБСУДИМ ВАШ ПРОЕКТ</div>
-				<form action=# enctype=multipart/form-data>
-					<div class=main-form>
-						<div class=form>
-							<input type=text name=name placeholder="Ваше имя" required>
-							<input type=text name=phone placeholder="Ваш телефон" required>
+	<div class="popup-overlay" data-modal>
+		<div class="popup">
+			<div class=popup-dialog>
+				<div class=popup-content>
+					<button class=popup-close>&times;</button>
+					<div class="popup-title title title-h3">оставЬТЕ СВОИ КОНТАКТЫ. мЫ СВЯЖЕМСЯ С ВАМИ И ОБСУДИМ ВАШ ПРОЕКТ</div>
+					<form action=# enctype=multipart/form-data>
+						<div class=main-form>
+							<div class=form>
+								<input type=text name=name placeholder="Ваше имя" required>
+								<input type=text name=phone placeholder="Ваш телефон" required>
+							</div>
+							<div class="popup-block">
+								<button class="btn popup-btn">отправить 
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M12 4L4 12" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M5.3335 4H12.0002V10.6667" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</button>
+								<div class="popup-subtitle subtitle subtitle-fz13">Нажимая на кнопку, я даю <a href="#" class="popup-link">согласие на обработку персональных данных</a></div>
+							</div>
 						</div>
-						<div class="popup-block">
-							<button class="btn popup-btn">отправить 
-								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M12 4L4 12" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-									<path d="M5.3335 4H12.0002V10.6667" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-								</svg>
-							</button>
-							<div class="popup-subtitle subtitle subtitle-fz13">Нажимая на кнопку, я даю <a href="#" class="popup-link">согласие на обработку персональных данных</a></div>
-						</div>
-					</div>
-				</form>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>

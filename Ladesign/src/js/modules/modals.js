@@ -98,10 +98,10 @@ const modals = () => {
         });
     }
 
-    bindModal('.button-design', '.popup-design', '.popup-design .popup-close');
-    bindModal('.button-consultation', '.popup-consultation', '.popup-consultation .popup-close');
-    bindModal('.fixed-gift', '.popup-gift', '.popup-gift .popup-close', true);
-    openByScroll('.fixed-gift');
+    bindModal('.application-link', '.popup-overlay', '.popup-overlay .popup-close');
+    // bindModal('.button-consultation', '.popup-consultation', '.popup-consultation .popup-close');
+    // bindModal('.fixed-gift', '.popup-gift', '.popup-gift .popup-close', true);
+    // openByScroll('.fixed-gift');
     // showModalByTime('.popup-consultation', 5000);
 };
 
