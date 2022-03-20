@@ -4434,9 +4434,9 @@ window.addEventListener('DOMContentLoaded', function () {
 
   Object(_modules_modals__WEBPACK_IMPORTED_MODULE_9__["default"])(); // sliders('.feedback-slider-item', 'horizontal', '.main-prev-btn', '.main-next-btn');
   // sliders('.main-slider-item', 'vertical');
-  // forms();
-  // mask('[name="phone"]');
-  // checkTextInputs('[name="name"]');
+
+  Object(_modules_forms__WEBPACK_IMPORTED_MODULE_7__["default"])();
+  Object(_modules_mask__WEBPACK_IMPORTED_MODULE_8__["default"])('[name="phone"]'); // checkTextInputs('[name="name"]');
   // checkTextInputs('[name="message"]');
   // showMoreStyles('.button-styles', '#styles .row');
   // calc('#size', '#material', '#options', '.promocode', '.calc-price');
