@@ -28,7 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
     filter();
     // pictureSize('.sizes-block');
     accordion('.accordion-heading span');
-    // burger('.burger-menu', '.burger');
+    burger('.nav .header-link', '.burger');
     // drop();
     scrolling('.pageup');
 });
