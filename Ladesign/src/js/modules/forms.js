@@ -3,15 +3,17 @@ import {postData} from "../services/requests";
 const forms = () => {
     const form = document.querySelectorAll('form'),
           inputs = document.querySelectorAll('input'),
-          upload = document.querySelectorAll('[name="upload"]');
-    
+          content = document.querySelector('.res-success');
+
+    content.style.display = 'none'
+
     const message = {
         loading: 'Загрузка...',
-        success: 'Спасибо! Скоро мы с вами свяжемся',
+        success: 'Ваша заявка успешно отправлена',
         failure: 'Что-то пошло не так...',
-        spinner: 'assets/img/spinner.gif',
-        ok: 'assets/img/ok.png',
-        fail: 'assets/img/fail.png'
+        spinner: 'assets/img/form/spinner.gif',
+        ok: 'assets/img/form/ok.svg',
+        fail: 'assets/img/form/fail.png'
     };
 
     const path = {
@@ -24,22 +26,8 @@ const forms = () => {
         inputs.forEach(item => {
             item.value = '';
         });
-        upload.forEach(item => {
-            item.previousElementSibling.textContent = "Файл не выбран";
-        });
     };
 
-    upload.forEach(item => {
-        item.addEventListener('input', () => {
-            console.log(item.files[0]);
-            let dots;
-            const arr = item.files[0].name.split('.');
-
-            arr[0].length > 6 ? dots = "..." : dots = '.';
-            const name = arr[0].substring(0, 6) + dots + arr[1];
-            item.previousElementSibling.textContent = name;
-        });
-    });
 
     form.forEach(item => {
         item.addEventListener('submit', (e) => {
@@ -47,7 +35,7 @@ const forms = () => {
 
             let statusMessage = document.createElement('div');
             statusMessage.classList.add('status');
-            item.parentNode.appendChild(statusMessage);
+            item.parentNode.insertBefore(statusMessage, item);
 
             item.classList.add('animated', 'fadeOutUp');
             setTimeout(() => {
@@ -73,6 +61,7 @@ const forms = () => {
                     console.log(res);
                     statusImg.setAttribute('src', message.ok);
                     textMessage.textContent = message.success;
+                    content.style.display = 'block';
                 })
                 .catch(() => {
                     statusImg.setAttribute('src', message.fail);
@@ -82,6 +71,7 @@ const forms = () => {
                     clearInputs();
                     setTimeout(() => {
                         statusMessage.remove();
+                        content.style.display = 'none';
                         item.style.display = 'block';
                         item.classList.remove('fadeOutUp');
                         item.classList.add('fadeInUp');

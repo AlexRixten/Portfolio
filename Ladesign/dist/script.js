@@ -4853,21 +4853,15 @@ var filter = function filter() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.function.name */ "./node_modules/core-js/modules/es.function.name.js");
-/* harmony import */ var core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.object.to-string */ "./node_modules/core-js/modules/es.object.to-string.js");
-/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.promise */ "./node_modules/core-js/modules/es.promise.js");
-/* harmony import */ var core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_promise_finally__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.promise.finally */ "./node_modules/core-js/modules/es.promise.finally.js");
-/* harmony import */ var core_js_modules_es_promise_finally__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_promise_finally__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _services_requests__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../services/requests */ "./src/js/services/requests.js");
-
-
+/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.object.to-string */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.promise */ "./node_modules/core-js/modules/es.promise.js");
+/* harmony import */ var core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_promise_finally__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.promise.finally */ "./node_modules/core-js/modules/es.promise.finally.js");
+/* harmony import */ var core_js_modules_es_promise_finally__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_promise_finally__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _services_requests__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/requests */ "./src/js/services/requests.js");
 
 
 
@@ -4877,14 +4871,15 @@ __webpack_require__.r(__webpack_exports__);
 var forms = function forms() {
   var form = document.querySelectorAll('form'),
       inputs = document.querySelectorAll('input'),
-      upload = document.querySelectorAll('[name="upload"]');
+      content = document.querySelector('.res-success');
+  content.style.display = 'none';
   var message = {
     loading: 'Загрузка...',
-    success: 'Спасибо! Скоро мы с вами свяжемся',
+    success: 'Ваша заявка успешно отправлена',
     failure: 'Что-то пошло не так...',
-    spinner: 'assets/img/spinner.gif',
-    ok: 'assets/img/ok.png',
-    fail: 'assets/img/fail.png'
+    spinner: 'assets/img/form/spinner.gif',
+    ok: 'assets/img/form/ok.svg',
+    fail: 'assets/img/form/fail.png'
   };
   var path = {
     designer: 'assets/server.php',
@@ -4895,27 +4890,14 @@ var forms = function forms() {
     inputs.forEach(function (item) {
       item.value = '';
     });
-    upload.forEach(function (item) {
-      item.previousElementSibling.textContent = "Файл не выбран";
-    });
   };
 
-  upload.forEach(function (item) {
-    item.addEventListener('input', function () {
-      console.log(item.files[0]);
-      var dots;
-      var arr = item.files[0].name.split('.');
-      arr[0].length > 6 ? dots = "..." : dots = '.';
-      var name = arr[0].substring(0, 6) + dots + arr[1];
-      item.previousElementSibling.textContent = name;
-    });
-  });
   form.forEach(function (item) {
     item.addEventListener('submit', function (e) {
       e.preventDefault();
       var statusMessage = document.createElement('div');
       statusMessage.classList.add('status');
-      item.parentNode.appendChild(statusMessage);
+      item.parentNode.insertBefore(statusMessage, item);
       item.classList.add('animated', 'fadeOutUp');
       setTimeout(function () {
         item.style.display = 'none';
@@ -4931,10 +4913,11 @@ var forms = function forms() {
       var api;
       item.closest('.popup-design') || item.classList.contains('calc_form') ? api = path.designer : api = path.question;
       console.log(api);
-      Object(_services_requests__WEBPACK_IMPORTED_MODULE_6__["postData"])(api, formData).then(function (res) {
+      Object(_services_requests__WEBPACK_IMPORTED_MODULE_4__["postData"])(api, formData).then(function (res) {
         console.log(res);
         statusImg.setAttribute('src', message.ok);
         textMessage.textContent = message.success;
+        content.style.display = 'block';
       }).catch(function () {
         statusImg.setAttribute('src', message.fail);
         textMessage.textContent = message.failure;
@@ -4942,6 +4925,7 @@ var forms = function forms() {
         clearInputs();
         setTimeout(function () {
           statusMessage.remove();
+          content.style.display = 'none';
           item.style.display = 'block';
           item.classList.remove('fadeOutUp');
           item.classList.add('fadeInUp');
